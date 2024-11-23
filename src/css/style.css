@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primaryColor: rgb(11, 7, 255);
+    --secondaryColor: rgb(18, 196, 8);
+    --background: rgb(233, 220, 229);
+    --blackColor: rgb(18, 16, 16);
+    --whiteColor: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(90, 236, 255);
+    height: 90vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0 50px,
+        black 50px 51px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0 50px,
+        black 50px 51px
+    );
+}
+
+main {
+    width: 100vw;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.note{
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 2px 1px black;
+    border: 1px solid black;
+    position: absolute;
+}
+
+
+.noteHeader{
+    border-bottom: 1px solid black;
+    background-color: rgb(255, 0, 0);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+}
+
+.noteHeader:hover{
+    cursor: grab;
+}
+
+.noteHeader button{
+    border: none;
+    background-color: transparent;
+    padding: 4px;
+    text-shadow: 1px 0px 1px white;
+    cursor: pointer;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.noteBody{
+    height: 90%;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    resize: none;
+    padding: 8px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+#newNoteContainer{
+    background-color: white;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+#noteColor{
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+#addButton{
+    border: none;
+    display: flex;
+    background: none;
+    cursor: pointer;
+    font-size: large;
+}
