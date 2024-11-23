@@ -27,11 +27,13 @@ buttonElement.addEventListener("click", () => {
 
     mainElement.appendChild(newNote);
     counterID++;
+    saveNotes();
 });
 
 mainElement.addEventListener("click", function (event) {
     if (event.target.classList.contains("close")) {
         event.target.closest(".note").remove();
+        saveNotes();
     }
 });
 
@@ -78,6 +80,7 @@ mainElement.addEventListener("mousemove", function (event) {
 
 mainElement.addEventListener("mouseup", function () {
     if (note.dom == null) {
+        saveNotes();
         return;
     }
     note.dom = null;
